@@ -41,5 +41,31 @@ public class PrintFuelEntry implements Printable {
         // of the printed document
         return PAGE_EXISTS;
     }
+    
+    
+     public void printLatestEntry() {
+         try {
+             
+             
+            PrinterJob job = PrinterJob.getPrinterJob();
+            job.setPrintable(this);
+            
+            /**
+             * Commented this in order to avoid wizard for printer selection
+            */
+//            boolean ok = job.printDialog();
+//            if (ok) {
+                try {
+                    job.print();
+                } catch (PrinterException ex) {
+                    /* The job did not successfully complete */
+                }
+//            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
 
 }
