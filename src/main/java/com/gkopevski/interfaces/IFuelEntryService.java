@@ -18,4 +18,5 @@ public interface IFuelEntryService {
 
     List<FuelEntry> getAllFuelEntries();
 
+    FuelEntry getLatestFuelEntry();
 }

@@ -20,7 +20,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-
 /**
  *
  * @author gkopevski
@@ -40,7 +39,6 @@ public class FuelCheckForm extends javax.swing.JFrame {
         initComponents();
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
-        
 //        AnnotationConfiguration config = new AnnotationConfiguration();
 //        config.addAnnotatedClass(FuelEntry.class );
 //        config.configure();
@@ -55,11 +53,10 @@ public class FuelCheckForm extends javax.swing.JFrame {
 //                .configure(myurl)
 //                .buildSessionFactory();
 //Create Spring application context
-
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/spring-config.xml");
-        
+
         //Get the Service from the Bridge
-         fuelEntryService = SpringContextBridge.services().getFuelEntryService();
+        fuelEntryService = SpringContextBridge.services().getFuelEntryService();
 
         List<FuelEntry> fuelEntries = fuelEntryService.getAllFuelEntries();
         if (fuelEntries == null || fuelEntries.size() == 0) {
@@ -67,7 +64,11 @@ public class FuelCheckForm extends javax.swing.JFrame {
         } else {
             System.out.println("First element: " + fuelEntries.get(0).getDriver());
         }
-        
+        FuelEntry lastEntry = fuelEntryService.getLatestFuelEntry();
+        if (lastEntry != null) {
+            System.out.println("Last element: " + lastEntry.getId());
+        }
+
         FuelEntry fuelEntry = FuelEntryFactory.createFunnelEntry();
         fuelEntryService.saveFuelEntry(fuelEntry);
     }
@@ -276,7 +277,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
             ses.scheduleAtFixedRate(new Runnable() {
                 @Override
                 public void run() {
-                   crawlData();
+                    crawlData();
                 }
             }, 0, Constants.TIMER_CRAWLING_SECONDS, TimeUnit.SECONDS);
         } catch (Exception e) {
@@ -285,18 +286,21 @@ public class FuelCheckForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
-     * This method will crawl data from a web site. When data is fetched will be compared with the latest get data from the database;
-     * If this data is newer it will be stored in the variable latest data which will be from type @FuelEntry.
-     * If the new data is newer will be passed for printing and it will be printed;
-     * 
+     * This method will crawl data from a web site. When data is fetched will be
+     * compared with the latest get data from the database; If this data is
+     * newer it will be stored in the variable latest data which will be from
+     * type @FuelEntry. If the new data is newer will be passed for printing and
+     * it will be printed;
+     *
      */
-    private void crawlData(){
+    private void crawlData() {
         try {
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     /**
      * @param args the command line arguments
      */

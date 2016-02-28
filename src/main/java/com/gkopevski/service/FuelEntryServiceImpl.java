@@ -35,5 +35,10 @@ public class FuelEntryServiceImpl implements IFuelEntryService {
         List<FuelEntry> result = fuelEntryRepository.getAllFuelEntries();
         return result;
     }
-    
+
+    @Override
+    public FuelEntry getLatestFuelEntry() {
+        return fuelEntryRepository.getLatestFuelEntry();
+    }
+     
 }

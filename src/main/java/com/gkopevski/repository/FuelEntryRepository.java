@@ -8,6 +8,7 @@ package com.gkopevski.repository;
 import com.gkopevski.model.FuelEntry;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
@@ -33,6 +34,20 @@ public class FuelEntryRepository {
         Query query = em.createQuery(
                 "SELECT fe FROM FuelEntry fe ORDER BY fe.id", FuelEntry.class);
         return query.getResultList();
+    }
+    
+    // Retrieves all the FuelEntries:
+    public FuelEntry getLatestFuelEntry() {
+        Query query = em.createQuery(
+                "SELECT fe FROM FuelEntry fe ORDER BY fe.id desc", FuelEntry.class);
+        query.setMaxResults(1);
+        FuelEntry result = null;
+        try {
+            result = (FuelEntry) query.getSingleResult();
+        } catch (NoResultException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
 //    public List<Product> findAll() {
