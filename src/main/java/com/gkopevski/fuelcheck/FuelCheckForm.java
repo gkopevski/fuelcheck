@@ -10,6 +10,10 @@ import com.gkopevski.model.FuelEntry;
 import com.gkopevski.printer.PrintFuelEntry;
 import com.gkopevski.utility.Constants;
 import com.gkopevski.utility.FuelEntryFactory;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -55,8 +59,8 @@ public class FuelCheckForm extends javax.swing.JFrame {
             System.out.println("Last element: " + lastEntry.getId());
         }
 
-        FuelEntry fuelEntry = FuelEntryFactory.createFunnelEntry();
-        fuelEntryService.saveFuelEntry(fuelEntry);
+//        FuelEntry fuelEntry = FuelEntryFactory.createFunnelEntry();
+//        fuelEntryService.saveFuelEntry(fuelEntry);
     }
 
     /**
@@ -281,6 +285,37 @@ public class FuelCheckForm extends javax.swing.JFrame {
      */
     private void crawlData() {
         try {
+            // Create a new instance of the html unit driver
+            // Notice that the remainder of the code relies on the interface, 
+            // not the implementation.
+            driver = new ChromeDriver();
+
+            // And now use this to visit Google
+            driver.get(Constants.BASE_URL + "/" + Constants.OVERVIEW_HTML);
+
+            // Find the text input element by its name
+            WebElement baseTable = driver.findElement(By.xpath("(//tr[@id='__DashBoardGroup21']/td/table[@id='__DashBoardGroup21']/tbody/tr)[3]"));
+
+            List<WebElement> rawEntry = baseTable.findElements(By.tagName("td"));
+
+            FuelEntry tempFuelEntry = new FuelEntry();
+            tempFuelEntry.setDriver(rawEntry.get(2).getText());
+            tempFuelEntry.setVehicle(rawEntry.get(3).getText());
+            tempFuelEntry.setProduct(rawEntry.get(4).getText());
+            tempFuelEntry.setDispenzer(Integer.valueOf(rawEntry.get(5).getText()));
+
+            SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyyy hh:mm:ss");
+            Date date = dt.parse(rawEntry.get(6).getText());
+            tempFuelEntry.setStartDate(date);
+            
+            String[] quantityUnit = rawEntry.get(8).getText().split(" ");
+            tempFuelEntry.setQuantity(new BigDecimal(quantityUnit[0]));
+            tempFuelEntry.setMeasurementUnit(quantityUnit[1]);
+            
+            driver.quit();
+            
+            fuelEntryService.saveFuelEntry(tempFuelEntry);
+            
 
         } catch (Exception e) {
             e.printStackTrace();
