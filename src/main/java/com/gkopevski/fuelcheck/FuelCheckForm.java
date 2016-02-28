@@ -5,26 +5,30 @@
  */
 package com.gkopevski.fuelcheck;
 
-import com.gkopevski.models.FuelEntry;
+import com.gkopevski.interfaces.IFuelEntryService;
+import com.gkopevski.model.FuelEntry;
 import com.gkopevski.printer.PrintFuelEntry;
 import com.gkopevski.utility.Constants;
-import java.net.URL;
-import java.util.Calendar;
+import com.gkopevski.utility.FuelEntryFactory;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 /**
  *
  * @author gkopevski
  */
 public class FuelCheckForm extends javax.swing.JFrame {
+
+//    @Autowired
+    private IFuelEntryService fuelEntryService;
 
     /**
      * Creates new form FuelCheckForm
@@ -36,6 +40,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
         initComponents();
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
+        
 //        AnnotationConfiguration config = new AnnotationConfiguration();
 //        config.addAnnotatedClass(FuelEntry.class );
 //        config.configure();
@@ -44,10 +49,27 @@ public class FuelCheckForm extends javax.swing.JFrame {
 //config.addAnnotatedClass(FuelEntry.class);
 //config.configure();
 //config.buildMappings();
-        URL myurl = Thread.currentThread().getContextClassLoader().getResource("hibernate.cfg.xml");
-        SessionFactory sessionFactory = new Configuration()
-                .configure(myurl)
-                .buildSessionFactory();
+// this was uncommented
+//        URL myurl = Thread.currentThread().getContextClassLoader().getResource("hibernate.cfg.xml");
+//        SessionFactory sessionFactory = new Configuration()
+//                .configure(myurl)
+//                .buildSessionFactory();
+//Create Spring application context
+
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/spring-config.xml");
+        
+        //Get the Service from the Bridge
+         fuelEntryService = SpringContextBridge.services().getFuelEntryService();
+
+        List<FuelEntry> fuelEntries = fuelEntryService.getAllFuelEntries();
+        if (fuelEntries == null || fuelEntries.size() == 0) {
+            System.out.println("Empty list");
+        } else {
+            System.out.println("First element: " + fuelEntries.get(0).getDriver());
+        }
+        
+        FuelEntry fuelEntry = FuelEntryFactory.createFunnelEntry();
+        fuelEntryService.saveFuelEntry(fuelEntry);
     }
 
     /**
