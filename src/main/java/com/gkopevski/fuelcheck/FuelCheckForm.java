@@ -5,10 +5,11 @@
  */
 package com.gkopevski.fuelcheck;
 
-import com.gkopevski.models.FuelEntry;
+import com.gkopevski.printer.PrintFuelEntry;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
 import java.net.URL;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,27 +26,23 @@ public class FuelCheckForm extends javax.swing.JFrame {
      * Creates new form FuelCheckForm
      */
     WebDriver driver;
+
     public FuelCheckForm() {
         initComponents();
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-        
-        
-        
+
 //        AnnotationConfiguration config = new AnnotationConfiguration();
 //        config.addAnnotatedClass(FuelEntry.class );
 //        config.configure();
 //        new SchemaExport(config).create(true, true);
-
 //Configuration config = new Configuration();
 //config.addAnnotatedClass(FuelEntry.class);
 //config.configure();
 //config.buildMappings();
-
-
-URL myurl = Thread.currentThread().getContextClassLoader().getResource("hibernate.cfg.xml");
-SessionFactory sessionFactory = new Configuration()
-            .configure(myurl)
-            .buildSessionFactory();
+        URL myurl = Thread.currentThread().getContextClassLoader().getResource("hibernate.cfg.xml");
+        SessionFactory sessionFactory = new Configuration()
+                .configure(myurl)
+                .buildSessionFactory();
     }
 
     /**
@@ -59,6 +56,7 @@ SessionFactory sessionFactory = new Configuration()
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -87,6 +85,13 @@ SessionFactory sessionFactory = new Configuration()
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Print");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -162,7 +167,9 @@ SessionFactory sessionFactory = new Configuration()
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
-                .addContainerGap(560, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(jButton3)
+                .addContainerGap(462, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,7 +177,8 @@ SessionFactory sessionFactory = new Configuration()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(408, Short.MAX_VALUE))
         );
 
@@ -184,34 +192,52 @@ SessionFactory sessionFactory = new Configuration()
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
             // Create a new instance of the html unit driver
-        // Notice that the remainder of the code relies on the interface, 
-        // not the implementation.
-        driver = new ChromeDriver();
-        
-        // And now use this to visit Google
-        driver.get("http://www.google.com");
-        
-        // Find the text input element by its name
-        WebElement element = driver.findElement(By.name("q"));
+            // Notice that the remainder of the code relies on the interface, 
+            // not the implementation.
+            driver = new ChromeDriver();
 
-        // Enter something to search for
-        element.sendKeys("Cheese!");
+            // And now use this to visit Google
+            driver.get("http://www.google.com");
 
-        // Now submit the form. WebDriver will find the form for us from the element
-        element.submit();
+            // Find the text input element by its name
+            WebElement element = driver.findElement(By.name("q"));
 
-        // Check the title of the page
-        System.out.println("Page title is: " + driver.getTitle());
+            // Enter something to search for
+            element.sendKeys("Cheese!");
 
-        
+            // Now submit the form. WebDriver will find the form for us from the element
+            element.submit();
+
+            // Check the title of the page
+            System.out.println("Page title is: " + driver.getTitle());
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       driver.quit();
+        driver.quit();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        try {
+            PrintFuelEntry pfe = new PrintFuelEntry();
+            
+            PrinterJob job = PrinterJob.getPrinterJob();
+            job.setPrintable(pfe);
+            boolean ok = job.printDialog();
+            if (ok) {
+                try {
+                    job.print();
+                } catch (PrinterException ex) {
+                    /* The job did not successfully complete */
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,6 +286,7 @@ SessionFactory sessionFactory = new Configuration()
     private javax.swing.JMenu helpMenu;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
