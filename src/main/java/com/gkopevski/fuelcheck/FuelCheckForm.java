@@ -251,7 +251,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
             ses.scheduleAtFixedRate(new Runnable() {
                 @Override
                 public void run() {
-                   
+                   crawlData();
                 }
             }, 0, 1, TimeUnit.MINUTES);
         } catch (Exception e) {
@@ -259,6 +259,18 @@ public class FuelCheckForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    /**
+     * This method will crawl data from a web site. When data is fetched will be compared with the latest get data from the database;
+     * If this data is newer it will be stored in the variable latest data which will be from type @FuelEntry.
+     * If the new data is newer will be passed for printing and it will be printed;
+     */
+    private void crawlData(){
+        try {
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * @param args the command line arguments
      */
