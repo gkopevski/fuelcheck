@@ -39,20 +39,6 @@ public class FuelCheckForm extends javax.swing.JFrame {
         initComponents();
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
-//        AnnotationConfiguration config = new AnnotationConfiguration();
-//        config.addAnnotatedClass(FuelEntry.class );
-//        config.configure();
-//        new SchemaExport(config).create(true, true);
-//Configuration config = new Configuration();
-//config.addAnnotatedClass(FuelEntry.class);
-//config.configure();
-//config.buildMappings();
-// this was uncommented
-//        URL myurl = Thread.currentThread().getContextClassLoader().getResource("hibernate.cfg.xml");
-//        SessionFactory sessionFactory = new Configuration()
-//                .configure(myurl)
-//                .buildSessionFactory();
-//Create Spring application context
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/spring-config.xml");
 
         //Get the Service from the Bridge
