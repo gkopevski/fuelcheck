@@ -6,6 +6,7 @@
 package com.gkopevski.fuelcheck;
 
 import com.gkopevski.printer.PrintFuelEntry;
+import com.gkopevski.utility.Constants;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.concurrent.Executors;
@@ -253,7 +254,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
                 public void run() {
                    crawlData();
                 }
-            }, 0, 1, TimeUnit.MINUTES);
+            }, 0, Constants.TIMER_CRAWLING_SECONDS, TimeUnit.SECONDS);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -263,6 +264,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
      * This method will crawl data from a web site. When data is fetched will be compared with the latest get data from the database;
      * If this data is newer it will be stored in the variable latest data which will be from type @FuelEntry.
      * If the new data is newer will be passed for printing and it will be printed;
+     * 
      */
     private void crawlData(){
         try {
