@@ -5,6 +5,7 @@
  */
 package com.gkopevski.fuelcheck;
 
+import com.gkopevski.models.FuelEntry;
 import com.gkopevski.printer.PrintFuelEntry;
 import com.gkopevski.utility.Constants;
 import java.net.URL;
@@ -29,6 +30,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
      * Creates new form FuelCheckForm
      */
     WebDriver driver;
+    FuelEntry latestFE;
 
     public FuelCheckForm() {
         initComponents();
