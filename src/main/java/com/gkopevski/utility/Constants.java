@@ -10,11 +10,21 @@ package com.gkopevski.utility;
  * @author gkope
  */
 public class Constants {
-    public static final int TIMER_CRAWLING_SECONDS = 60000;
-    public static final String BASE_URL = "file:///Users/gkopevski/gk/utility/detoil/tokheim_proekt/";
+    public static final int TIMER_CRAWLING_SECONDS = 10;
+    
+    //demo purposes
+    public static final String BASE_URL = "D:\\gk\\utility\\detoil\\tokheim_proekt\\";
     public static final String OVERVIEW_HTML = "Overview.html";
+    
+    //real one
+//    public static final String BASE_URL = "192.168.1.172";
+    public static final String LOGIN_URL = "index.php";
+//    public static final String OVERVIEW_HTML = "Overview.html";
+    
     public static final String DATABASE_URL = "localhost:3306/fuelCheck";
     public static final String DATABASE_USERNAME = "root";
     public static final String DATABASE_PASSWORD = "kopecar123";
+    
+    
     
 }
