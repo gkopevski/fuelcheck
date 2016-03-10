@@ -10,6 +10,7 @@ import com.gkopevski.model.FuelEntry;
 import com.gkopevski.printer.PrintFuelEntry;
 import com.gkopevski.utility.Constants;
 import com.gkopevski.utility.FuelEntryFactory;
+import com.gkopevski.utility.Utility;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.SimpleDateFormat;
@@ -75,6 +76,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
     }
 
     public FuelCheckForm() {
+        System.out.println("Today's password: " + Utility.generatePassword());
         initComponents();
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
@@ -233,7 +235,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
                         .addComponent(jButton2)
                         .addGap(43, 43, 43)
                         .addComponent(jButton3)))
-                .addContainerGap(462, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,7 +247,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
                     .addComponent(jButton3))
                 .addGap(18, 18, 18)
                 .addComponent(jButton4)
-                .addContainerGap(367, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -325,8 +327,24 @@ public class FuelCheckForm extends javax.swing.JFrame {
             // not the implementation.
             driver = new ChromeDriver();
 
+            
+            
+            driver.get(Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
+            
+            
+            WebElement element = driver.findElement(By.id("Field__UserLogin"));
+            element.sendKeys(Constants.USERNAME);
+            
+            element = driver.findElement(By.id("Field__UserPassword"));
+            element.sendKeys(Utility.generatePassword());
+
+
+            element = driver.findElement(By.xpath("(//div[@id='DivMenu']/table/tbody/tr/td)[1]"));
+            element.click();
+            
+
             // And now use this to visit Google
-            driver.get(Constants.BASE_URL + "/" + Constants.OVERVIEW_HTML);
+//            driver.get(Constants.BASE_URL + "/" + Constants.OVERVIEW_HTML);
 
             // Find the text input element by its name
             WebElement baseTable = driver.findElement(By.xpath("(//tr[@id='__DashBoardGroup21']/td/table[@id='__DashBoardGroup21']/tbody/tr)[3]"));
