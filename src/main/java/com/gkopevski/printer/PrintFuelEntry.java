@@ -6,6 +6,7 @@
 package com.gkopevski.printer;
 
 import com.gkopevski.fuelcheck.FuelCheckForm;
+import com.gkopevski.fuelcheck.PrintPaper;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
@@ -13,6 +14,7 @@ import java.awt.print.PageFormat;
 import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
+import javax.swing.JTable;
 
 /**
  *
@@ -36,45 +38,51 @@ public class PrintFuelEntry implements Printable {
         g2d.translate(pf.getImageableX(), pf.getImageableY());
 
         // Now we perform our rendering
-        if(FuelCheckForm.latestFE !=null){
-            
-            g.drawString("Polnenje", 10, 10);
-            g.drawString("Izvrshil: " + FuelCheckForm.latestFE.getDriver(), 10, 20);
-            
-            
-        }else{
+        if (FuelCheckForm.latestFE != null) {
+
+            Object[][] tableData = new Object[4][2];
+            PrintPaper ps = new PrintPaper();
+
+            Object printitem[][] = tableData;
+            ps.setItems(printitem);
+            PrinterJob pj = PrinterJob.getPrinterJob();
+            pj.setPrintable(new PrintPaper.MyPrintable(), ps.getPageFormat(pj));
+            try {
+                pj.print();
+
+            } catch (PrinterException ex) {
+                ex.printStackTrace();
+            }
+
+        } else {
             g.drawString("Hello world!", 10, 10);
         }
-        
 
         // tell the caller that this page is part
         // of the printed document
         return PAGE_EXISTS;
     }
-    
-    
-     public void printLatestEntry() {
-         try {
-             
+
+    public void printLatestEntry() {
+        try {
+
             PrinterJob job = PrinterJob.getPrinterJob();
             job.setPrintable(this);
-            
+
             /**
              * Commented this in order to avoid wizard for printer selection
-            */
+             */
 //            boolean ok = job.printDialog();
 //            if (ok) {
-                try {
-                    job.print();
-                } catch (PrinterException ex) {
-                    /* The job did not successfully complete */
-                }
+            try {
+                job.print();
+            } catch (PrinterException ex) {
+                /* The job did not successfully complete */
+            }
 //            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-    
 
 }
