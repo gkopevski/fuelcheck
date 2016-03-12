@@ -21,6 +21,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -93,7 +94,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
         if (latestFE != null) {
             System.out.println("Last element: " + latestFE.getId());
         }
-
+        
 //        FuelEntry fuelEntry = FuelEntryFactory.createFunnelEntry();
 //        fuelEntryService.saveFuelEntry(fuelEntry);
     }
@@ -325,7 +326,11 @@ public class FuelCheckForm extends javax.swing.JFrame {
             // not the implementation.
             driver = new ChromeDriver();
 
+            
+            System.out.println("URL: " + Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
             driver.get(Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
+            
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
             WebElement element = driver.findElement(By.id("Field__UserLogin"));
             element.sendKeys(Constants.USERNAME);
@@ -336,6 +341,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
             element = driver.findElement(By.xpath("(//div[@id='DivMenu']/table/tbody/tr/td)[1]"));
             element.click();
 
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             // And now use this to visit Google
 //            driver.get(Constants.BASE_URL + "/" + Constants.OVERVIEW_HTML);
             // Find the text input element by its name
@@ -345,7 +351,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
 
             SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyyy hh:mm:ss");
             Date date = dt.parse(rawEntry.get(6).getText());
-            if (date.after(latestFE.getStartDate())) {
+            if (latestFE == null || date.after(latestFE.getStartDate())) {
                 FuelEntry tempFuelEntry = new FuelEntry();
                 tempFuelEntry.setDriver(rawEntry.get(2).getText());
                 tempFuelEntry.setVehicle(rawEntry.get(3).getText());
@@ -359,7 +365,6 @@ public class FuelCheckForm extends javax.swing.JFrame {
                 tempFuelEntry.setMeasurementUnit(quantityUnit[1]);
 
                 fuelEntryService.saveFuelEntry(tempFuelEntry);
-                
                 
                 PrintFuelEntry pfe = new PrintFuelEntry();
                 pfe.printLatestEntry();

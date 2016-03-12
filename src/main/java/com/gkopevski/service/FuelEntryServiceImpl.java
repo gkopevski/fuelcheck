@@ -9,6 +9,7 @@ import com.gkopevski.interfaces.IFuelEntryService;
 import com.gkopevski.model.FuelEntry;
 import com.gkopevski.repository.FuelEntryRepository;
 import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
  * @author gkopevski
  */
 @Service
+@Transactional
 public class FuelEntryServiceImpl implements IFuelEntryService {
 
     @Autowired
