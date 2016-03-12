@@ -366,6 +366,8 @@ public class FuelCheckForm extends javax.swing.JFrame {
 
                 fuelEntryService.saveFuelEntry(tempFuelEntry);
                 
+                latestFE = tempFuelEntry;
+                
                 PrintFuelEntry pfe = new PrintFuelEntry();
                 pfe.printLatestEntry();
             }

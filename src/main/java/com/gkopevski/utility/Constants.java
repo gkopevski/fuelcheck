@@ -10,7 +10,7 @@ package com.gkopevski.utility;
  * @author gkope
  */
 public class Constants {
-    public static final int TIMER_CRAWLING_SECONDS = 10;
+    public static final int TIMER_CRAWLING_SECONDS = 60;
     
     //demo purposes
 //    public static final String BASE_URL = "D:\\gk\\utility\\detoil\\tokheim_actual_needed_pages";
