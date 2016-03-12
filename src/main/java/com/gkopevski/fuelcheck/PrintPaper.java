@@ -198,8 +198,11 @@ public class PrintPaper {
                     g2d.drawString("Datum: ", 10, y + 70);
                     g2d.drawString("" +FuelCheckForm.latestFE.getStartDate(), 50, y + 70);
                     
+                    g2d.drawString("Vozilo: ", 10, y + 80);
+                    g2d.drawString("" +FuelCheckForm.latestFE.getVehicle(), 50, y + 80);
                     
-                    g2d.drawLine(10, y + 90, 180, y + 90);
+                    
+                    g2d.drawLine(10, y + 100, 180, y + 100);
 
                     int cH = 0;
                     TableModel mod = itemsTable.getModel();
