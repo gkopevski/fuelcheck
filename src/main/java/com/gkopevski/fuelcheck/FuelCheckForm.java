@@ -9,10 +9,8 @@ import com.gkopevski.interfaces.IFuelEntryService;
 import com.gkopevski.model.FuelEntry;
 import com.gkopevski.printer.PrintFuelEntry;
 import com.gkopevski.utility.Constants;
-import com.gkopevski.utility.FuelEntryFactory;
 import com.gkopevski.utility.Utility;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -38,9 +36,9 @@ public class FuelCheckForm extends javax.swing.JFrame {
      * Creates new form FuelCheckForm
      */
     WebDriver driver;
-    FuelEntry latestFE;
-    
-        /**
+    public static FuelEntry latestFE;
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -91,9 +89,9 @@ public class FuelCheckForm extends javax.swing.JFrame {
         } else {
             System.out.println("First element: " + fuelEntries.get(0).getDriver());
         }
-        FuelEntry lastEntry = fuelEntryService.getLatestFuelEntry();
-        if (lastEntry != null) {
-            System.out.println("Last element: " + lastEntry.getId());
+        latestFE = fuelEntryService.getLatestFuelEntry();
+        if (latestFE != null) {
+            System.out.println("Last element: " + latestFE.getId());
         }
 
 //        FuelEntry fuelEntry = FuelEntryFactory.createFunnelEntry();
@@ -130,7 +128,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("CheckFuel");
+        jButton1.setText("Test");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -144,7 +142,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Print");
+        jButton3.setText("Print Latest");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -226,28 +224,28 @@ public class FuelCheckForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)
-                        .addGap(43, 43, 43)
-                        .addComponent(jButton3)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton4)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton1))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -327,48 +325,47 @@ public class FuelCheckForm extends javax.swing.JFrame {
             // not the implementation.
             driver = new ChromeDriver();
 
-            
-            
             driver.get(Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
-            
-            
+
             WebElement element = driver.findElement(By.id("Field__UserLogin"));
             element.sendKeys(Constants.USERNAME);
-            
+
             element = driver.findElement(By.id("Field__UserPassword"));
             element.sendKeys(Utility.generatePassword());
 
-
             element = driver.findElement(By.xpath("(//div[@id='DivMenu']/table/tbody/tr/td)[1]"));
             element.click();
-            
 
             // And now use this to visit Google
 //            driver.get(Constants.BASE_URL + "/" + Constants.OVERVIEW_HTML);
-
             // Find the text input element by its name
             WebElement baseTable = driver.findElement(By.xpath("(//tr[@id='__DashBoardGroup21']/td/table[@id='__DashBoardGroup21']/tbody/tr)[3]"));
 
             List<WebElement> rawEntry = baseTable.findElements(By.tagName("td"));
 
-            FuelEntry tempFuelEntry = new FuelEntry();
-            tempFuelEntry.setDriver(rawEntry.get(2).getText());
-            tempFuelEntry.setVehicle(rawEntry.get(3).getText());
-            tempFuelEntry.setProduct(rawEntry.get(4).getText());
-            tempFuelEntry.setDispenzer(Integer.valueOf(rawEntry.get(5).getText()));
-
             SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyyy hh:mm:ss");
             Date date = dt.parse(rawEntry.get(6).getText());
-            tempFuelEntry.setStartDate(date);
-            
-            String[] quantityUnit = rawEntry.get(8).getText().split(" ");
-            tempFuelEntry.setQuantity(new BigDecimal(quantityUnit[0]));
-            tempFuelEntry.setMeasurementUnit(quantityUnit[1]);
-            
+            if (date.after(latestFE.getStartDate())) {
+                FuelEntry tempFuelEntry = new FuelEntry();
+                tempFuelEntry.setDriver(rawEntry.get(2).getText());
+                tempFuelEntry.setVehicle(rawEntry.get(3).getText());
+                tempFuelEntry.setProduct(rawEntry.get(4).getText());
+                tempFuelEntry.setDispenzer(Integer.valueOf(rawEntry.get(5).getText()));
+
+                tempFuelEntry.setStartDate(date);
+
+                String[] quantityUnit = rawEntry.get(8).getText().split(" ");
+                tempFuelEntry.setQuantity(new BigDecimal(quantityUnit[0]));
+                tempFuelEntry.setMeasurementUnit(quantityUnit[1]);
+
+                fuelEntryService.saveFuelEntry(tempFuelEntry);
+                
+                
+                PrintFuelEntry pfe = new PrintFuelEntry();
+                pfe.printLatestEntry();
+            }
+
             driver.quit();
-            
-            fuelEntryService.saveFuelEntry(tempFuelEntry);
-            
 
         } catch (Exception e) {
             e.printStackTrace();

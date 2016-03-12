@@ -5,6 +5,7 @@
  */
 package com.gkopevski.printer;
 
+import com.gkopevski.fuelcheck.FuelCheckForm;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
@@ -35,7 +36,16 @@ public class PrintFuelEntry implements Printable {
         g2d.translate(pf.getImageableX(), pf.getImageableY());
 
         // Now we perform our rendering
-        g.drawString("Hello world!", 100, 100);
+        if(FuelCheckForm.latestFE !=null){
+            
+            g.drawString("Polnenje", 10, 10);
+            g.drawString("Izvrshil: " + FuelCheckForm.latestFE.getDriver(), 10, 20);
+            
+            
+        }else{
+            g.drawString("Hello world!", 10, 10);
+        }
+        
 
         // tell the caller that this page is part
         // of the printed document
@@ -45,7 +55,6 @@ public class PrintFuelEntry implements Printable {
     
      public void printLatestEntry() {
          try {
-             
              
             PrinterJob job = PrinterJob.getPrinterJob();
             job.setPrintable(this);
