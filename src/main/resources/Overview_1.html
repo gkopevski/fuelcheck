@@ -1,0 +1,914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0055)http://192.168.1.172/cgi-bin/index.php?check=2120648530 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="refresh" content="180">
+
+<title>Overview</title>
+<link href="./Overview_files/dropdown.css" media="all" rel="stylesheet" type="text/css"><link href="./Overview_files/dd_default.css" media="all" rel="stylesheet" type="text/css"><link href="./Overview_files/Charts.css" media="all" rel="stylesheet" type="text/css"><link href="./Overview_files/Style_new_print.css" media="all" rel="stylesheet" type="text/css"><link href="./Overview_files/Style_new_screen.css" media="all" rel="stylesheet" type="text/css"><link href="./Overview_files/Style_new.css" media="all" rel="stylesheet" type="text/css"><script type="text/javascript" src="./Overview_files/jquery.js"></script>
+<script type="text/javascript" src="./Overview_files/gauge.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./Overview_files/RGraph.common.core.js"></script>
+<script type="text/javascript" src="./Overview_files/RGraph.thermometer.js"></script>
+<script language="JavaScript" src="./Overview_files/menu.js"></script>
+<script language="JavaScript" src="./Overview_files/CalendarPopup.js"></script>
+<script language="JavaScript">var cal = new CalendarPopup("DateDiv", "English");cal.showYearNavigation();</script>
+<script src="./Overview_files/scripts.js" type="text/javascript"></script> 
+<script language="JavaScript" src="./Overview_files/gen_validatorv31.js" type="text/javascript"></script>
+</head>
+<body bgcolor="#F1EDEC" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onkeydown="checkEnterKey(event)">
+<div align="center" width="100%" height="100%"><div class="main"><form name="PageForm" method="POST" action="" enctype="multipart/form-data">
+<input type="hidden" name="__PageParams__" size="120" value="Page=DashBoard.php&amp;Table=none">
+<input type="hidden" name="__URL__" value="">
+<input type="hidden" name="__Request__" value="3">
+<input type="hidden" name="__JSCurrentTime__" value="1457788671159">
+<input type="hidden" name="__PageRef__" value="">
+<input type="hidden" name="__PrevPage__" value="/cgi-bin/index.php">
+<input type="hidden" name="__Order__" value="+">
+<input type="hidden" name="__OrderCol__" value="">
+<input type="hidden" name="__JSStartDate__" value="">
+<div id="DateDiv" style="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></div><div class="bandeau"><table width="100%"><tbody><tr>     <td width="234">
+<img src="./Overview_files/bandeau_l.png" width="234" align="left/" class="noprint"></td><td>&nbsp;</td><td width="766"><img src="./Overview_files/bandeau_r.png" width="766" class="noprint"></td></tr></tbody></table>
+<div class="title_page">Overview</div><div class="menu_top">
+<div style="float:right;" align="right" class="noprint"><a href="http://192.168.1.172/cgi-bin/index.php?check=2120648530#" onclick="ButtonClick(this,&#39;Page=DashBoard.php&amp;HistReset=true&amp;Table=__Index__&#39;)">Home | <img src="./Overview_files/icon_accueil.png"></a><br><a href="http://192.168.1.172/cgi-bin/index.php?check=2120648530#" onclick="ButtonClick(this,&#39;Page=Login.php&#39;)">Logoff | <img src="./Overview_files/icon_deconnexion.png"></a><br><a href="http://192.168.1.172/cgi-bin/index.php?check=2120648530#" onclick="OpenHelp(&#39;/Help/1/manual.html#none&#39;)">Help | <img src="./Overview_files/icon_aide.png"></a></div></div></div><div id="DDM" class="menu"><ul id="nav" class="dropdown dropdown-horizontal">	<li class="dir"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="20" class="sep"> &nbsp; </td><td width="180" class="table_dd" onmouseover="this.className=&#39;table_dd2&#39;;" onmouseout="this.className=&#39;table_dd&#39;;">&nbsp; Installation / Maintenance</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Terminals configuration</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Terminal&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Terminals</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=reboot.php&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Restart</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Dispensers configuration</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Dispenser&amp;RecordType=FuelDispenser&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Dispensers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Product&amp;RecordType=Fuel&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Fuels</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Pulser&amp;ModePage=ReadOnly&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Pulsers</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Tanks configuration</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Tank&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Tanks</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_GaugesController&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Gauges controller</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Gauge&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Gauges</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_GaugeTable&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Gauge tables</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Data base</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBCheck.php&amp;Action=CheckForcourtConfig&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Forecourt checking</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBSave.php&amp;Action=Save&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Backup</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBSave.php&amp;Action=Restore&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> DB restore</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBStatistics.php&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Statistics</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBSave.php&amp;Action=Repair&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Maintenance</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBCheck.php&amp;Action=Repair&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Corrections</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_DBTables&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Description</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Functional parameters</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Data.php&amp;Table=CF_FunctParameters&amp;Id=1&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Parameters</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Site map (communications)</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=SiteMap.php&amp;Table=none&amp;Action=Init&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Site map (communications)</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=TermXEquip.php&amp;Table=none&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Terminals-equipments association</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Logging</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=JrlSave.php&amp;SpecificAction=Installation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Export log files</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=JrlSave.php&amp;SpecificAction=Scan&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Find in log files</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="20" class="sep"> &nbsp; </td><td width="180" class="table_dd" onmouseover="this.className=&#39;table_dd2&#39;;" onmouseout="this.className=&#39;table_dd&#39;;">&nbsp; Administration</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Infrastructure</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Data.php&amp;Table=CF_Site&amp;SpecificAction=Administration&amp;Id=1&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Site</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Administrative organization</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Department&amp;SpecificAction=Administration&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Service&amp;SpecificAction=Administration&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Reports / Exports</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Reports</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Transaction&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Transactions</td></tr></tbody></table>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductStock&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductStockHistory&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Product stock history</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products quotas</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Department&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Service&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,InputList&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,AuthorizedValue&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  checked values</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,All&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> All</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,VehicleTanks&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles tanks</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Operator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Operators</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Identifier&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Identifiers</td></tr></tbody></table>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Administrative organization</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Organization,Site&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Sites</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Organization,Department&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Organization,Service&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=TrxReport&amp;MenuData=Report,Event&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Events</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ProgReport&amp;SpecificAction=Administration&amp;MenuData=Report,Transaction&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Reports automatic production</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Transaction&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Transactions</td></tr></tbody></table>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductStock&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductStockHistory&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Product stock history</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products quotas</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Department&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Service&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,InputList&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,AuthorizedValue&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  checked values</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,All&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> All</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,VehicleTanks&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles tanks</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Operator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Operators</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Identifier&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Identifiers</td></tr></tbody></table>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Administrative organization</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Organization,Site&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Sites</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Organization,Department&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Organization,Service&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Administration&amp;Table=CF_ProgReport&amp;MenuData=Report,Event&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Events</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Quotas control</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaDepartment&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaService&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaDriver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaVehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaADInputList&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaADValueSet&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  checked values</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuota&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> All</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Operators</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Operator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Operators</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_AccessProfile&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Access profiles</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Tax system</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_VATProduct&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> VAT rate</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Product&amp;RecordType=Fuel&amp;SpecificAction=Tax&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Fuels</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Events</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_DefaultAlarm&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Default events</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Maintenance</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=JrlSave.php&amp;SpecificAction=Administration&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Export log files</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=SWUpdate.php&amp;Table=SWUpdate&amp;Action=Upload&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Software update</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBPurge.php&amp;Action=PurgeDisplay&amp;Table=TrxPurge&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Transactions purge</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=reboot.php&amp;Action=SelfReboot&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Restart</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBSave.php&amp;SpecificAction=Administration&amp;Action=Save&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> DB Backup</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=EX_Transac.php&amp;Table=SpecificMID&amp;SpecificAction=Display&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Version display</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Miscellaneous</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Data.php&amp;Table=CF_FunctParameters&amp;Id=1&amp;SpecificAction=Administration&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Functional parameters</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Server&amp;SpecificAction=Administration&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Servers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_FilterCriteria&amp;SpecificAction=Administration&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Filter criteria</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Extend.php&amp;Action=Menu&amp;Table=Custom&amp;SpecificAction=Administration&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Plugins</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="20" class="sep"> &nbsp; </td><td width="180" class="table_dd" onmouseover="this.className=&#39;table_dd2&#39;;" onmouseout="this.className=&#39;table_dd&#39;;">&nbsp; Operating management</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Vehicle&amp;SpecificAction=Gestion&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_VehicleType&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Types</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_VehicleCategory&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Categories</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Driver&amp;SpecificAction=Gestion&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_DriversGroup&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Groups</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Identifiers</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Identifier&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Identifiers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Identifier&amp;ModePage=ReadOnly&amp;SpecificAction=Search&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Search for vehicle/driver</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ADMacrodef&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Macro-definitions</td></tr></tbody></table>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Input lists</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ADInputList&amp;SpecificAction=Gestion&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ADInputListElement&amp;SpecificAction=Gestion&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Input items</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Inputs of checked values</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ADValueSet&amp;SpecificAction=Gestion&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Inputs of checked values</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ADValueElement&amp;SpecificAction=Gestion&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Authorised values</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_UserText&amp;SpecificAction=&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> User texts</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Product&amp;RecordType=Fuel&amp;SpecificAction=ExploitationMngt&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Fuels</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Quotas control</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaDriver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaVehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaADInputList&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;SpecificAction=DisplayQuotaADValueSet&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  checked values</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="20" class="sep"> &nbsp; </td><td width="180" class="table_dd" onmouseover="this.className=&#39;table_dd2&#39;;" onmouseout="this.className=&#39;table_dd&#39;;">&nbsp; Site operating</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Consultation</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=SiteStatus.php&amp;Table=DashBoard&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Status of site</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_Transac&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Transactions</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Vehicle&amp;ModePage=ReadOnly&amp;SpecificAction=Exploitation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Driver&amp;ModePage=ReadOnly&amp;SpecificAction=Exploitation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_TankStatus&amp;ModePage=ReadOnly&amp;SiteSelectMode=AffectedOperator&amp;Action=ByTank&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_ExploitEvt&amp;ModePage=ReadOnly&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Events</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Transactions</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_Transac&amp;SpecificAction=ExternalAdd&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> External fuelling</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_Transac&amp;SpecificAction=InternalAdd&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Internal fuelling</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_Transac&amp;SpecificAction=Modification&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Modification</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Reports / Exports</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Reports</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,Transaction&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Transactions</td></tr></tbody></table>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductStock&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductStockHistory&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Product stock history</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products quotas</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Department&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Service&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,InputList&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,AuthorizedValue&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  checked values</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,ProductQuota,All&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> All</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,VehicleTanks&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles tanks</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,Operator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Operators</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,Identifier&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Identifiers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Rpt_Consumption.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=TrxReport&amp;MenuData=Report,Event&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Events</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ProgReport&amp;SpecificAction=Exploitation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Reports automatic production</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,Transaction&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Transactions</td></tr></tbody></table>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductStock&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductStockHistory&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Product stock history</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products quotas</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Department&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Service&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,InputList&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,AuthorizedValue&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  checked values</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,ProductQuota,All&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> All</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,Vehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,VehicleTanks&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles tanks</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,Driver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,Operator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Operators</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,Identifier&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Identifiers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Action=FromMenu&amp;SpecificAction=Exploitation&amp;Table=CF_ProgReport&amp;MenuData=Report,Event&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Events</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Products stocks</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_TankStatus&amp;ModePage=ReadOnly&amp;SiteSelectMode=AffectedOperator&amp;Action=ByTank&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Consultation</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=EX_TankEvt&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Management</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Tank&amp;SpecificAction=Exploitation&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Tanks parameters</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Quotas control</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;ModePage=ReadOnly&amp;SpecificAction=DisplayQuotaDepartment&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Departments</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;ModePage=ReadOnly&amp;SpecificAction=DisplayQuotaService&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Services</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;ModePage=ReadOnly&amp;SpecificAction=DisplayQuotaDriver&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Drivers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;ModePage=ReadOnly&amp;SpecificAction=DisplayQuotaVehicle&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Vehicles</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;ModePage=ReadOnly&amp;SpecificAction=DisplayQuotaADInputList&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  input lists</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;ModePage=ReadOnly&amp;SpecificAction=DisplayQuotaADValueSet&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Associated data:  checked values</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_QuotaView&amp;ModePage=ReadOnly&amp;SpecificAction=DisplayQuota&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> All</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Station control</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Terminal&amp;SpecificAction=Exploitation&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Terminals</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Dispenser&amp;RecordType=FuelDispenser&amp;SpecificAction=Exploitation&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Dispensers</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_ProductVsSite&amp;RecordType=Fuel&amp;SpecificAction=Exploitation&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Fuels</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_GaugesController&amp;SpecificAction=Exploitation&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Gauges controller</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=List.php&amp;Table=CF_Gauge&amp;SpecificAction=Exploitation&amp;SiteSelectMode=AffectedOperator&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Gauges</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Database</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBSave.php&amp;SpecificAction=Exploitation&amp;Action=Save&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> DB Backup</td></tr></tbody></table>
+	</li>
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=DBStatistics.php&amp;SpecificAction=Exploitation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> DB Statistics</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	<li class="dir"><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onmouseover="this.className=&#39;DDmenu_item&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Miscellaneous</td></tr></tbody></table>
+	<ul style="display: none;">
+	<li><table cellspacing="0" cellpadding="0" width="178"><tbody><tr><td class="table_dd_2" onclick="ButtonClick(this,&#39;HistReset=true&amp;Page=Extend.php&amp;Action=Menu&amp;Table=Custom&amp;SpecificAction=Exploitation&#39;)" onmouseover="this.className=&#39;DDmenu_item_link&#39;;" onmouseout="this.className=&#39;DDmenu_item_2&#39;;"> Plugins</td></tr></tbody></table>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	
+	</div>
+<div style="position:relative;right:50; top:0px; font-size:10px; width=100%; text-align:right;"><span>Site:Detoil DOO (2)</span><br><span>User: TOKHEIM</span><br></div>	<div class="sous_menu" style="clear:both"><div style="position:absolute; display:block; left:50px; top:15px; "><ul><li><a href="http://192.168.1.172/cgi-bin/index.php?check=2120648530#" onclick="ButtonClick(this,&#39;Page=DashBoard.php&amp;Table=none&#39;)"><div style="font-size: 12px;font-family: verdana;" class="noprint">Overview</div></a></li></ul></div></div><div align="center"><table title="__DashBoardMessage" align="center"><tbody><tr><td>(Refresh time for this page=180 Seconds)</td></tr></tbody></table>
+<div class="block"><table border="0" bordercolor="BLUE" cellpadding="0" cellspacing="0" width="850" class="tableau">
+<tbody><tr><td class="bg_block_tl"><img src="./Overview_files/bg_block_tl.png"></td><td><table border="0" bordercolor="RED" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<td class="bg_block_tm" width="50px"><div class="image"><img src="./Overview_files/icon_stock.png"></div></td> <td class="bg_block_tm" width="30"><div class="image"> <img src="./Overview_files/icon_calendrier_g.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=List.php&amp;Table=EX_TankStatus&amp;ModePage=ReadOnly&amp;Action=ByTank&#39;)" class="noprint"> </div></td><td class="bg_block_tm" width="30" style="padding-left:5"><div class="image"><a class="bubblecenter" href="javascript:OpenHelp(&#39;/Help/1/manual.html#DashPerTankStock&#39;)"><img height="15" src="./Overview_files/icon_i.png"></a> </div></td><td class="bg_block_tm" width="12"><div class="image"> | </div></td><td class="bg_block_tm" width="1300">Stock (per tank) </td></tr></tbody></table></td><td width="73" class="bg_block_tr"><img src="./Overview_files/bg_block_tr.png"></td></tr><tr class="raw_0" id="__DashBoardGroup2" name="__DashBoardGroup2"><script language="JavaScript"> GeneralGroupDisplayMngt('__DashBoardGroup2');</script><td colspan="3"><table border="0" bordercolor="blue" width="100%" cellpadding="0" cellspacing="0" class="tableau_2" id="__DashBoardGroup2"><tbody><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td>
+<script>
+function showGaugeTT1_1() {
+	var gaugeTT1_1 = new Gauge({
+	renderTo  : 'gaugeTT1_1',
+	width     : 200,
+	height    : 200,
+	glow      : true,
+	units     : 'x1000 L',
+	unitLabel : 'L',
+	unitSize  : 0,
+	title     : 'Euro Dizel (1)',
+	titleSize : 0,
+	strokeTicks : false,
+	maxValue    : 200000.00,
+	majorTicks  : [0,33.3,66.7,100,133.3,166.7,200],
+	highlights : [{
+		from  : 500.00,
+		to    : 200000.00,
+		color : 'PaleGreen'
+	}, {
+		from  : 200.00,
+		to    : 500.00,
+		color : 'Khaki'
+	}, {
+		from  : 0,
+		to    : 200.00,
+		color : 'Coral'
+	}],
+	animation : {
+		delay : 1,
+		duration: 1,
+		fn : 'linear'
+	},
+	valueFormat : { int : 6, dec : 0 }
+	,colors      : {
+			plate      : '#F1EDEC',
+			title      : '#00',
+			units      : '#00',
+			needle     : { start : 'rgba(1, 10, 250, 0.9)', end : 'rgba(1, 10, 200, .6)'}	
+		}	});
+	gaugeTT1_1.setValue( 1000.00);
+	gaugeTT1_1.draw();
+	
+};
+$(document).ready(function(){
+	showGaugeTT1_1();
+	});
+</script><script>
+function showGaugeTP1_1() {
+	var gaugeTP1_1 = new Gauge({
+	renderTo  : 'gaugeTP1_1',
+	width     : 200,
+	height    : 200,
+	glow      : true,
+	units     : 'x1000 L',
+	unitLabel : 'L',
+	unitSize  : 0,
+	title     : 'Euro Dizel (1)',
+	titleSize : 0,
+	strokeTicks : false,
+	maxValue    : 200000.00,
+	majorTicks  : [0,33.3,66.7,100,133.3,166.7,200],
+	highlights : [{
+		from  : 0.00,
+		to    : 200000.00,
+		color : 'PaleGreen'
+	}, {
+		from  : 0.00,
+		to    : 0.00,
+		color : 'Khaki'
+	}, {
+		from  : 0,
+		to    : 0.00,
+		color : 'Coral'
+	}],
+	animation : {
+		delay : 1,
+		duration: 1,
+		fn : 'linear'
+	},
+	valueFormat : { int : 6, dec : 0 }
+	,colors      : {
+			plate      : '#F1EDEC',
+			title      : '#00',
+			units      : '#00',
+			needle     : { start : 'rgba(250, 50, 50, 0.9)', end : 'rgba(255, 10, 10, .7)'}	
+		}	});
+	gaugeTP1_1.setValue( 0.00);
+	gaugeTP1_1.draw();
+	
+};
+$(document).ready(function(){
+	showGaugeTP1_1();
+	});
+</script><td colspan="3" align="center" class="col1_centre"></td>
+<td class="bg_block_mr"> <img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td><td height="4" colspan="3" align="center"><div class="separateur"></div></td><td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td colspan="3" align="center" class="col1_centre"><b>Calculated stock per tank</b></td>
+<td class="bg_block_mr"></td></tr><tr class="raw_0" align="center"><td width="3" class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td><td colspan="3"><table border="0" width="100%"><tbody><tr></tr><tr class="raw_0"><td class="col5" align="center"><table border="0" class="StckTab0"><tbody><tr><td rowspan="3"><canvas id="gaugeTT1_1" onmouseover="SetHistoricalImgPosition(event, &#39;SpanForgaugeTT1_1&#39;);" onclick="return false;" width="200" height="200"></canvas></td><td width="70" height="20" align="center"><img class="noprint" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_TankStatus&amp;Id=1&amp;ModePage=ReadOnly&amp;Action=ByTank&#39;);" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onmouseout="this.className=&#39;body&#39;;" src="./Overview_files/icon_loupe.png"></td></tr><tr><td width="70" height="110">&nbsp;</td></tr><tr><td width="70" height="70">&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td><td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td colspan="3" align="center" class="col1_centre"></td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td colspan="3" align="center" class="col1_centre"><b>Actual stock per tank</b></td>
+<td class="bg_block_mr"></td></tr><tr class="raw_0" align="center"><td width="3" class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td><td colspan="3"><table border="0" width="100%"><tbody><tr></tr><tr class="raw_0"><td class="col5" align="center"><table border="0" class="StckTab2"><tbody><tr><td rowspan="3"><canvas id="gaugeTP1_1" onmouseover="SetHistoricalImgPosition(event, &#39;SpanForgaugeTP1_1&#39;);" onclick="return false;" width="200" height="200"></canvas></td><td width="70" height="20" align="center"><img class="noprint" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_TankStatus&amp;Id=1&amp;ModePage=ReadOnly&amp;Action=ByTank&#39;);" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onmouseout="this.className=&#39;body&#39;;" src="./Overview_files/icon_loupe.png"></td></tr><tr><td width="70" height="110">&nbsp;</td></tr><tr><td><div id="bubble"><a href="http://192.168.1.172/cgi-bin/index.php?check=2120648530#" id="bubble"><canvas onclick="return false;" id="water1_1" width="70" height="70"></canvas><span>Euro Dizel (1): Water (mm)= </span></a></div></td></tr></tbody></table></td></tr></tbody></table></td><td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr></tbody></table></td></tr><tr><td width="25" class="bg_block_bl"> </td><td class="bg_block_bm"> &nbsp; </td><td class="bg_block_br"> </td></tr></tbody></table></div><div class="block"><table border="0" bordercolor="BLUE" cellpadding="0" cellspacing="0" width="850" class="tableau">
+<tbody><tr><td class="bg_block_tl"><img src="./Overview_files/bg_block_tl.png"></td><td><table border="0" bordercolor="RED" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<td class="bg_block_tm" width="50px"><div class="image"><img src="./Overview_files/icon_terminaux.png"></div></td><td class="bg_block_tm" width="30" style="padding-left:5"><div class="image"><a class="bubblecenter" href="javascript:OpenHelp(&#39;/Help/1/manual.html#DashTerminalStatus&#39;)"><img height="15" src="./Overview_files/icon_i.png"></a> </div></td><td class="bg_block_tm" width="12"><div class="image"> | </div></td><td class="bg_block_tm" width="1300">Terminals </td></tr></tbody></table></td><td width="73" class="bg_block_tr"><img src="./Overview_files/bg_block_tr.png"></td></tr><tr class="raw_0" id="__DashBoardGroup4" name="__DashBoardGroup4"><script language="JavaScript"> GeneralGroupDisplayMngt('__DashBoardGroup4');</script><td colspan="3"><table border="0" bordercolor="blue" width="100%" cellpadding="0" cellspacing="0" class="tableau_2" id="__DashBoardGroup4"><tbody><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td>
+<td align="left" class="col1_1">&nbsp; </td>
+<td align="center" class="col4">Terminal number </td>
+<td align="center" class="col4">Reference </td>
+<td align="center" class="col4">Terminal type </td>
+<td align="center" class="col4">Authorised </td>
+<td align="left" class="col2">Status </td>
+<td class="bg_block_mr"> <img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td><td height="4" colspan="6" align="center"><div class="separateur"></div></td><td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=CF_Terminal&amp;Id=2&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">Detoil Podvizna 2 </td>
+<td align="left" class="col4">'Compact' </td>
+<td align="left" class="col4">YES </td>
+<td align="left" class="col2">OK </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr></tbody></table></td></tr><tr><td width="25" class="bg_block_bl"> </td><td class="bg_block_bm"> &nbsp; </td><td class="bg_block_br"> </td></tr></tbody></table></div><div class="block"><table border="0" bordercolor="BLUE" cellpadding="0" cellspacing="0" width="850" class="tableau">
+<tbody><tr><td class="bg_block_tl"><img src="./Overview_files/bg_block_tl.png"></td><td><table border="0" bordercolor="RED" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<td class="bg_block_tm" width="50px"><div class="image"><img src="./Overview_files/icon_distributeur.png"></div></td><td class="bg_block_tm" width="30" style="padding-left:5"><div class="image"><a class="bubblecenter" href="javascript:OpenHelp(&#39;/Help/1/manual.html#DashDispenserStatus&#39;)"><img height="15" src="./Overview_files/icon_i.png"></a> </div></td><td class="bg_block_tm" width="12"><div class="image"> | </div></td><td class="bg_block_tm" width="1300">Dispenser(s) </td></tr></tbody></table></td><td width="73" class="bg_block_tr"><img src="./Overview_files/bg_block_tr.png"></td></tr><tr class="raw_0" id="__DashBoardGroup5" name="__DashBoardGroup5"><script language="JavaScript"> GeneralGroupDisplayMngt('__DashBoardGroup5');</script><td colspan="3"><table border="0" bordercolor="blue" width="100%" cellpadding="0" cellspacing="0" class="tableau_2" id="__DashBoardGroup5"><tbody><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td>
+<td align="left" class="col1_1">&nbsp; </td>
+<td align="center" class="col4">Dispenser number </td>
+<td align="center" class="col4">Dispenser </td>
+<td align="center" class="col4">Authorised </td>
+<td align="center" class="col4">Status </td>
+<td align="center" class="col4">In use </td>
+<td align="center" class="col4">Vehicle </td>
+<td align="center" class="col4">Driver </td>
+<td align="center" class="col4">Fuel </td>
+<td align="center" class="col2">Current quantity </td>
+<td class="bg_block_mr"> <img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td><td height="4" colspan="10" align="center"><div class="separateur"></div></td><td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_DispenserStatus&amp;Id=1&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">Dispenzer 2 </td>
+<td align="left" class="col4">YES </td>
+<td align="left" class="col4">OK </td>
+<td align="left" class="col4">Busy </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col2">13.31 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr></tbody></table></td></tr><tr><td width="25" class="bg_block_bl"> </td><td class="bg_block_bm"> &nbsp; </td><td class="bg_block_br"> </td></tr></tbody></table></div><div class="block"><table border="0" bordercolor="BLUE" cellpadding="0" cellspacing="0" width="850" class="tableau">
+<tbody><tr><td class="bg_block_tl"><img src="./Overview_files/bg_block_tl.png"></td><td><table border="0" bordercolor="RED" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<td class="bg_block_tm" width="50px"><div class="image"><img src="./Overview_files/icon_site.png"></div></td> <td class="bg_block_tm" width="30"><div class="image"> <img src="./Overview_files/icon_calendrier_g.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=List.php&amp;Table=EX_Transac&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </div></td><td class="bg_block_tm" width="30" style="padding-left:5"><div class="image"><a class="bubblecenter" href="javascript:OpenHelp(&#39;/Help/1/manual.html#DashProductTransactionsList&#39;)"><img height="15" src="./Overview_files/icon_i.png"></a> </div></td><td class="bg_block_tm" width="12"><div class="image"> | </div></td><td class="bg_block_tm" width="1300">Local activity </td></tr></tbody></table></td><td width="73" class="bg_block_tr"><img src="./Overview_files/bg_block_tr.png"></td></tr><tr class="raw_0" id="__DashBoardGroup21" name="__DashBoardGroup21"><script language="JavaScript"> GeneralGroupDisplayMngt('__DashBoardGroup21');</script><td colspan="3"><table border="0" bordercolor="blue" width="100%" cellpadding="0" cellspacing="0" class="tableau_2" id="__DashBoardGroup21"><tbody><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td>
+<td align="left" class="col1_1">&nbsp; </td>
+<td align="Center" class="col4">Driver </td>
+<td align="Center" class="col4">Vehicle </td>
+<td align="Center" class="col4">Product </td>
+<td align="Center" class="col4">Dispenser </td>
+<td align="Center" class="col4">Start date-time </td>
+<td align="Center" class="col4">Odometer </td>
+<td align="Center" class="col2">Quantity </td>
+<td class="bg_block_mr"> <img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0"><td class="bg_block_ml"><img src="./Overview_files/bg_block_ml.png"> </td><td height="4" colspan="8" align="center"><div class="separateur"></div></td><td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=46&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">12/03/2016 14:28:49 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">0.00 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=45&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">12/03/2016 14:23:01 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">100.61 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=44&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">12/03/2016 14:20:17 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">100.69 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=43&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">12/03/2016 14:18:54 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">2.08 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=42&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">NASKOVIC_IGOR </td>
+<td align="left" class="col4">KU 405 CT </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">02/06/2015 15:17:17 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">82.30 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=41&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">30/05/2015 15:44:32 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">418.26 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=40&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">NASKOVIC_IGOR </td>
+<td align="left" class="col4">KU 405 CT </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">30/05/2015 15:26:41 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">445.64 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=39&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="MenuCursorHand"> </td>
+<td align="left" class="col4">JOVANOVSKI_ZARKO </td>
+<td align="left" class="col4">KU 072 CK </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">30/05/2015 09:09:58 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">153.96 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=38&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">JOVANOVSKI_ZARKO </td>
+<td align="left" class="col4">KU 072 CK </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">28/05/2015 07:20:15 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">113.98 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=37&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">DIMKOVSKI_GORAN </td>
+<td align="left" class="col4">KU 071 CK </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">26/05/2015 07:44:36 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">390.18 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=36&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">NASKOVIC_IGOR </td>
+<td align="left" class="col4">KU 405 CT </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">22/05/2015 11:37:31 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">450.16 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=35&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">JOVANOVSKI_ZARKO </td>
+<td align="left" class="col4">KU 072 CK </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">21/05/2015 07:29:15 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">184.74 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=34&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">JOVANOVSKI_ZARKO </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">21/05/2015 07:24:56 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">150.22 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=33&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">KU 072 CK </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">21/05/2015 07:15:27 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">150.93 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=32&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">NASKOVIC_IGOR </td>
+<td align="left" class="col4">KU 405 CT </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">20/05/2015 18:35:21 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">673.00 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=31&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">KARANFILOVSKI_BLAGE </td>
+<td align="left" class="col4">KU 273 DH </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">20/05/2015 09:53:15 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">162.45 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=30&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">PROBA PROBEN </td>
+<td align="left" class="col4">proba </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">14/05/2015 13:59:54 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">20.00 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=29&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">PROBA PROBEN </td>
+<td align="left" class="col4">proba </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">14/05/2015 13:55:16 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">20.00 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_0" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=28&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">PROBA PROBEN </td>
+<td align="left" class="col4">proba </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">14/05/2015 13:49:42 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">20.00 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr><tr class="raw_1" align="center"><td class="bg_block_ml"> </td>
+<td align="center" class="col1_icon"><img src="./Overview_files/icon_loupe.png" onmouseover="this.className=&#39;MenuCursorHand&#39;;" onclick="ButtonClick(this,&#39;Page=Data.php&amp;Table=EX_Transac&amp;Id=27&amp;ModePage=ReadOnly&amp;SpecificAction=Display&#39;)" class="noprint"> </td>
+<td align="left" class="col4">PROBA PROBEN </td>
+<td align="left" class="col4">proba </td>
+<td align="left" class="col4">Euro Dizel </td>
+<td align="right" class="col4">2 </td>
+<td align="left" class="col4">14/05/2015 13:49:00 </td>
+<td align="right" class="col4">&nbsp; </td>
+<td align="right" class="col2">0.36 L </td>
+<td class="bg_block_mr"><img src="./Overview_files/bg_block_mr.png"> </td></tr></tbody></table></td></tr><tr><td width="25" class="bg_block_bl"> </td><td class="bg_block_bm"> &nbsp; </td><td class="bg_block_br"> </td></tr></tbody></table></div></div><script language="JavaScript">
+	var frmvalidator  = new Validator("PageForm");
+</script>
+<div class="bas" id="PageBottom"><img src="./Overview_files/bg_bas2.png" width="100%" height="126px">
+    <div class="langue"><select name="__Language__" id="__Language__" onchange="ButtonClick(this,&#39;Page=DashBoard.php&amp;Table=none&#39;);"><option value="Français">Français</option><option selected="" value="English">English</option><option value="Deutsch">Deutsch</option><option value="Español">Español</option><option value="Italiano">Italiano</option><option value="Nederlands">Nederlands</option><option value="Português">Português</option><option value="Latviešu">Latviešu</option><option value="Lietuvos">Lietuvos</option><option value="Norske">Norske</option><option value="Danske">Danske</option><option value="Polski">Polski</option><option value="Bosnian">Bosnian</option><option value="Croatian">Croatian</option><option value="Slovenian">Slovenian</option><option value="Estonian">Estonian</option><option value="Slovakian">Slovakian</option><option value="Russian">Russian</option><option value="Magyar">Magyar</option><option value="Svenska">Svenska</option><option value="Český">Český</option><option value="Român">Român</option></select>   </div>
+<div class="copyright">10.020.01 14/12/05 Copyright -  © 2010-2014 - Tokheim Sofitam Applications S.A.S. - 12/03/2016 14:28:26 - 0.386 sec.</div></div></form>
+</div></div></body></html>

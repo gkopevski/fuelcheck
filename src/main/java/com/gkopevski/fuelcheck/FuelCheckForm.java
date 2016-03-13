@@ -94,7 +94,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
         if (latestFE != null) {
             System.out.println("Last element: " + latestFE.getId());
         }
-        
+
 //        FuelEntry fuelEntry = FuelEntryFactory.createFunnelEntry();
 //        fuelEntryService.saveFuelEntry(fuelEntry);
     }
@@ -326,10 +326,9 @@ public class FuelCheckForm extends javax.swing.JFrame {
             // not the implementation.
             driver = new ChromeDriver();
 
-            
             System.out.println("URL: " + Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
             driver.get(Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
-            
+
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
             WebElement element = driver.findElement(By.id("Field__UserLogin"));
@@ -349,10 +348,15 @@ public class FuelCheckForm extends javax.swing.JFrame {
 
             List<WebElement> rawEntry = baseTable.findElements(By.tagName("td"));
 
+            FuelEntry tempFuelEntry = new FuelEntry();
+            String[] quantityUnit = rawEntry.get(8).getText().split(" ");
+            tempFuelEntry.setQuantity(new BigDecimal(quantityUnit[0]));
+            tempFuelEntry.setMeasurementUnit(quantityUnit[1]);
+
             SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyyy hh:mm:ss");
             Date date = dt.parse(rawEntry.get(6).getText());
-            if (latestFE == null || date.after(latestFE.getStartDate())) {
-                FuelEntry tempFuelEntry = new FuelEntry();
+            if (latestFE == null || (date.after(latestFE.getStartDate()) && tempFuelEntry.getQuantity().compareTo(BigDecimal.ZERO) > 0)) {
+
                 tempFuelEntry.setDriver(rawEntry.get(2).getText());
                 tempFuelEntry.setVehicle(rawEntry.get(3).getText());
                 tempFuelEntry.setProduct(rawEntry.get(4).getText());
@@ -360,14 +364,10 @@ public class FuelCheckForm extends javax.swing.JFrame {
 
                 tempFuelEntry.setStartDate(date);
 
-                String[] quantityUnit = rawEntry.get(8).getText().split(" ");
-                tempFuelEntry.setQuantity(new BigDecimal(quantityUnit[0]));
-                tempFuelEntry.setMeasurementUnit(quantityUnit[1]);
-
                 fuelEntryService.saveFuelEntry(tempFuelEntry);
-                
+
                 latestFE = tempFuelEntry;
-                
+
                 PrintFuelEntry pfe = new PrintFuelEntry();
                 pfe.printLatestEntry();
             }

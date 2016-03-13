@@ -13,14 +13,15 @@ public class Constants {
     public static final int TIMER_CRAWLING_SECONDS = 60;
     
     //demo purposes
-//    public static final String BASE_URL = "D:\\gk\\utility\\detoil\\tokheim_actual_needed_pages";
+//    public static final String BASE_URL = "C:\\gk\\git\\fuelcheck\\src\\main\\resources\\";
 //    public static final String OVERVIEW_HTML = "Overview.html";
 //    public static final String LOGIN_HTML = "Login.html";
+//    public static final String OVERVIEW_HTML = "Overview_1.html";
     
     //real one
     public static final String BASE_URL = "http://192.168.1.172";
     public static final String LOGIN_HTML = "cgi-bin/index.php";
-    public static final String OVERVIEW_HTML = "Overview.html";
+    
     
     
     public static final String USERNAME = "TOKHEIM";
