@@ -13,7 +13,7 @@ public class Constants {
     public static final int TIMER_CRAWLING_SECONDS = 60;
     
     //demo purposes
-//    public static final String BASE_URL = "C:\\gk\\git\\fuelcheck\\src\\main\\resources\\";
+//    public static final String BASE_URL = "C:\\gk\\git\\fuelcheck\\src\\main\\resources";
 //    public static final String OVERVIEW_HTML = "Overview.html";
 //    public static final String LOGIN_HTML = "Login.html";
 //    public static final String OVERVIEW_HTML = "Overview_1.html";

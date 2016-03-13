@@ -20,8 +20,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -77,7 +76,8 @@ public class FuelCheckForm extends javax.swing.JFrame {
     public FuelCheckForm() {
         System.out.println("Today's password: " + Utility.generatePassword());
         initComponents();
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        System.setProperty("phantomjs.binary.path", "drivers/phantomjs.exe");
 
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/spring-config.xml");
 
@@ -261,7 +261,7 @@ public class FuelCheckForm extends javax.swing.JFrame {
             // Create a new instance of the html unit driver
             // Notice that the remainder of the code relies on the interface, 
             // not the implementation.
-            driver = new ChromeDriver();
+            driver = new PhantomJSDriver();;
 
             // And now use this to visit Google
             driver.get("http://www.google.com");
@@ -324,7 +324,8 @@ public class FuelCheckForm extends javax.swing.JFrame {
             // Create a new instance of the html unit driver
             // Notice that the remainder of the code relies on the interface, 
             // not the implementation.
-            driver = new ChromeDriver();
+
+            driver = new PhantomJSDriver();
 
             System.out.println("URL: " + Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
             driver.get(Constants.BASE_URL + "/" + Constants.LOGIN_HTML);
